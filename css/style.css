@@ -1,10 +1,10 @@
-:root {
-    --primaryText: #fff;
-    --secondaryText: #ff015e;
-    --primary: rgba(156, 39, 176, .60);
-    --secondary: rgba(255, 1, 94, .60); 
-    --buttonHover: rgba(156, 39, 176, .40);
-    --smallButtonHover: rgba(0, 0, 0, .25);
+:root { 
+    --primaryText: #f0e6e6;
+    --secondaryText: #dfa36f;
+    --primary: rgba(245, 240, 240, 0.6); /* Default Button Color (60% opaque Black) */
+    --secondary: rgba(245, 240, 240, 0.6); /* Highlight Button Color (75% opaque Black) */
+    --buttonHover: rgba(245, 240, 240, 0.3); /* Button Hover Color (80% opaque Black) */
+    --smallButtonHover: rgba(138, 134, 134, 0.7); /* Small Button Hover Color (30% opaque Black) */
 }
 
 html {
@@ -26,7 +26,8 @@ body {
     min-height: 100%;
     /* The image used for the site background. Try changing skyscape.jpg to stars.jpg. Put a replacement photo in the images folder and, in line 21 below, replace skyscape.jpg with yourbackgroundfilename.jpg */
     /* The linear gradient darkens the image, like putting a sunglasses lens on top of it. If you want to darken the image even more, change 0.1 (both times) to 0.3 or higher */
-    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../images/background.jpg);
+    background: radial-gradient(circle, rgba(71, 61, 61, 0.8) 40%, rgba(0, 0, 0, 0.2) 100%),
+  url(../images/background.jpg);;
     /* Prevents the browser from repeating or "tiling" the background image */
     background-repeat: no-repeat;
     background-position: center;
@@ -41,6 +42,7 @@ body {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    color: white;
 }
 
 h1 {
@@ -71,7 +73,13 @@ img {
     flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: center;   
+}
+.profile-image {
+    border: 4px solid var(--primaryText);
+    border-color: rgb(161, 158, 158);
+    animation: emerge 1.5s ease-in-out;
+
 }
 
 .image-container {
@@ -88,11 +96,14 @@ img {
 }
 
 .name strong {
-    background-color: rgba(0, 0, 0, 0.50);
+    background-color: rgba(37, 6, 6, 0.5);
 }
 
 .section-header {
     padding-top: .5em;
+    color: #dfa36f;
+    animation: emerge 1.5s ease-in-out;
+    font-family: 'Lobster', sans-serif;
 }
 
 .button,
@@ -110,6 +121,7 @@ img {
 
 .button, .external-link {
     border: 1px solid var(--primaryText);
+    color: black;
     border-radius: 20px;
     box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.24);
     overflow: hidden;
@@ -118,6 +130,8 @@ img {
     background-color: var(--primary);
     cursor: pointer;
     transition: 0.2s all;
+    animation: emerge 1.5s ease-in-out;
+    font-family: 'Lobster', sans-serif;
 }
 
 .button:not(.highlight) {
@@ -135,14 +149,22 @@ img {
 .button:active, .external-link:active { 
     transform: scale(0.98); 
     /* Scaling button to 0.98 to its original size */ 
-    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24); 
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.039); 
     /* Lowering the shadow */ 
 } 
 
 .intro {
     margin: 0 auto;
-}
+    color: #f7f1f1;
+    font-weight: italic;
+    animation: emerge 1.5s ease-in-out;
+    font-family: 'Lobster', sans-serif;
 
+}
+@keyframes emerge {
+  from { opacity: 0; }   /* start fully invisible */
+  to   { opacity: 1; }   /* fade in to fully visible */
+}
 .section {
     margin-top: 1em;
 }
@@ -189,7 +211,7 @@ img {
 
 .footer {
   font-size: .66em;
-  background-color: rgba(0, 0, 0, .5);
+  background-color: rgba(247, 244, 244, 0.5);
   color: rgba(225, 225, 225, .8);
   text-decoration: none;
   width: 100%;
