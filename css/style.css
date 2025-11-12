@@ -2,9 +2,9 @@
     --primaryText: #f0e6e6;
     --secondaryText: #dfa36f;
     --primary: rgba(245, 240, 240, 0.6); /* Default Button Color (60% opaque Black) */
-    --secondary: rgba(245, 240, 240, 0.6); /* Highlight Button Color (75% opaque Black) */
-    --buttonHover: rgba(245, 240, 240, 0.3); /* Button Hover Color (80% opaque Black) */
-    --smallButtonHover: rgba(138, 134, 134, 0.7); /* Small Button Hover Color (30% opaque Black) */
+    --secondary: rgba(245, 240, 240, 0.6); /* Highlight Button Color (60% opaque Black) */
+    --buttonHover: rgba(245, 240, 240, 0.3); /* Button Hover Color (30% opaque Black) */
+    --smallButtonHover: rgba(138, 134, 134, 0.7); /* Small Button Hover Color (70% opaque Black) */
 }
 
 html {
